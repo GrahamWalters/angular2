@@ -4,7 +4,7 @@ import { User } from '../shared/models/user';
 @Component({
     selector: 'user-form',
     template: `
-        <form #form="ngForm" >
+        <form #form="ngForm" (ngSubmit)="onSubmit()" *ngIf="active">
             <div class="form-group" [ngClass]="{'has-error': name.invalid && name.touched}">
                 <input type="text" class="form-control" placeholder="Name" name="name" required
                 [(ngModel)]="newUser.name" #name="ngModel" />
@@ -34,4 +34,13 @@ import { User } from '../shared/models/user';
 
 export class UserFormComponent {
     newUser: User = new User();
+    active: boolean = true;
+
+    onSubmit() {
+
+        // Clear Form & Reset Validation.
+        this.newUser = new User();
+        this.active = false;
+        setTimeout(() => this.active = true, 0);
+    }
 }
