@@ -1,0 +1,12 @@
+<div class="jumbotron">
+    <h1>Users</h1>
+</div>
+
+<div class="users-list row" *ngIf="users">
+    <div class="col-sm-4" *ngFor="let user of users">
+        <div class="user-card text-center">
+            <img [src]="user.avatar" alt="" class="user-avatar img-rounded">
+            <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+        </div>
+    </div>
+</div>
