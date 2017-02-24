@@ -6,7 +6,7 @@ import { AboutUserComponent } from '../about-user/about-user.component';
 
 const aboutRoutes: Routes = [
   {
-    path: 'about',
+    path: '',
     component: AboutSectionComponent,
     children: [
       {
