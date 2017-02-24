@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { User } from '../shared/models/user';
-import { UserService } from '../shared/services/user.service';
 
 @Component({
   selector: 'app-about',
@@ -11,10 +11,10 @@ export class AboutComponent implements OnInit {
 
   users: User[];
 
-  constructor(private service: UserService) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.service.getUsers().then(users => this.users = users);
+    this.route.data.forEach((data: { users: User[] }) => this.users = data.users);
   }
 
 }
