@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { AboutUserComponent } from './about-user/about-user.component';
+import { UserService } from './shared/services/user.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { AboutUserComponent } from './about-user/about-user.component';
     HttpModule,
     appRouting
   ],
-  providers: [],
+  providers: [
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
