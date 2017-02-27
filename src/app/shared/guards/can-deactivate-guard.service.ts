@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { canDeactivate } from '@angular/router';
+import { CanDeactivate } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 
 export class CanComponentDeactivate {
