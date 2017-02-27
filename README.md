@@ -1,4 +1,6 @@
-# TestApp
+# Routing Angular 2+ Applications
+
+https://school.scotch.io/routing-angular-2-applications/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.32.3.
 
